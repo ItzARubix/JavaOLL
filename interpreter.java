@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.IOException;
 
-public class intepreter {
+public class interpreter {
 	public static void main(String[] args) throws IOException {
 	
 		try {

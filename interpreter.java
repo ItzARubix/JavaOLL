@@ -5,11 +5,21 @@ import java.util.ArrayList;
 import java.io.IOException;
 
 public class interpreter {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
+
+		if(args.length == 0) {
+			System.out.println("No file selected. \nPlease run the OLL command followed by the path to the OLL file you want to execute.");
+			System.exit(1);
+		}
+		
 	
 		try {
 		
 			File ollProgram = new File(args[0]);
+			if(!ollProgram.exists()) {
+				System.out.println("Could not find the OLL file that you entered. \nPlease run the OLL command followed by the path to the OLL file you want to execute.");
+				System.exit(2);
+			}
 			Scanner readProgram = new Scanner(ollProgram);
 			ArrayList<String> tokens = new ArrayList<String>();
 			ArrayList<Integer> labels = new ArrayList<Integer>();
@@ -110,19 +120,11 @@ public class interpreter {
 			
 			
 			
-		} catch(IOException e) {
-		
-			System.out.println("You've gotten an exception. Are you sure the file you entered exists?");
-			System.out.println("Exception information:");
+		} catch(Exception e) {
+			System.out.println("An unknown exception occurred. This may be due to a syntax error or runtime error in your program.");
+			System.out.println("For educational purposes, you may read the exception and attempt to diagnose the issue.");
+			System.out.println("Unless you're familiar with the source code of the interpreter, this will likely not make sense to you.");
 			System.out.println(e);
-			
-		} catch(ArrayIndexOutOfBoundsException e) {
-			
-			System.out.println("You've gotten an exception. Did you forget to provide a file when running the program?");
-			System.out.println("Exception information:");
-			System.out.println(e);
-			
 		}
-
 	}
 }

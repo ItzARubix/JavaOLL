@@ -4,7 +4,7 @@ An interpreter for [Our Little Language](https://github.com/basvdl97/OLL-Interpr
 ## Usage Instructions
 1. [Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 2. On your machine, navigate to the cloned repository
-3. Run `./OLL /path/to/program` where `/path/to/program` is replaced with the file path of your program written in OLL
+3. Run `./JavaOLL /path/to/program` where `/path/to/program` is replaced with the file path of your program written in OLL
 
 ## Upkeep and Installation via Package Managers
 It is unlikely that I will be updating the interpreter from its current state, as though there are still some potential improvements that could be made, I am mostly satisfied with what I have and do not wish to continue maintaining this package as of right now. 
